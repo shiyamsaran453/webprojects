@@ -1,0 +1,621 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+               
+        }
+        .head{
+            display: grid;
+            grid-template-columns: 50% 30% 20%;
+            grid-template-rows: 100px auto 200px;
+            z-index: 1;
+            position: relative;
+        }
+        .head::before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image: url('bg.avif');
+            background-attachment:fixed; 
+            background-size: 100%;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .foot{
+            height: 350px;
+            padding-top: 60px;
+            font-weight: bolder;
+            font-size: 30px;
+     
+            grid-area: 2/2/2/2;
+           
+            border-radius: 15px;
+            text-align: center;
+            padding-right:40px;
+          
+            
+           
+        }
+        .foot>ul>li>a:hover{
+            color: red;
+
+        }
+        .foot>ul>li>a{
+            text-decoration: none;
+            color: black;
+        }
+        .foot>ul>li:hover{
+            background-color:whitesmoke;
+            color:red
+            
+        }
+        .foot >ul>li{
+            
+            border: 2px solid black;
+            padding: 10px;
+            padding-bottom: 2px;
+            list-style: none;
+            text-decoration: none;
+       
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+        .the{
+            grid-area: 2/1/2/1;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            padding-top: 50px;
+            padding-left: 450px;
+            font-size: 25px;
+            font-weight:bolder;  
+        }
+        .the >p>span{
+            font-size: 40px;  
+        }
+        .products{
+            display: grid;
+            grid-template-columns:75px 250px 250px 250px 250px 75px;
+            grid-template-rows:75px 350px auto;
+            gap: 60px;  
+        }
+        .products >p{
+            grid-column:span 7;
+            text-align: center;
+            font-size: 40px;
+            background-color: aliceblue;
+            padding-top: 20px;
+        }
+        .product1>img{
+           
+            height: 150px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        .product1:hover{
+            background-color: whitesmoke;
+        }
+        .product1{   
+            grid-area: 2/2/2/2;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .product2>img{   
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .product2:hover{
+           background-color: whitesmoke;
+       }
+       .product2{  
+           grid-area: 2/3/2/3;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .product3>img{   
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .product3:hover{
+           background-color: whitesmoke;
+       }
+       .product3{   
+           grid-area: 2/4/2/4;
+           text-align: center;
+           border-radius: 10px;
+        }
+        .product4>img{   
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .product4:hover{
+           background-color: whitesmoke;
+       }
+       .product4{   
+           grid-area: 2/5/2/5;
+           text-align: center;
+           border-radius: 10px;
+        }
+        .buton > button{
+            color: black;
+            background-color:aliceblue;
+            border-radius: 5px; 
+            padding: 10px;
+            margin-top: 5px; 
+            font-weight: bolder;
+        }
+        .buton >button:hover{
+            background-color:orange;
+            color: white;
+
+        }
+        .product5>img{   
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .product5:hover{
+           background-color: whitesmoke;
+       }
+       .product5{   
+           padding-top: 10px;
+           grid-area: 3/2/3/2;
+           text-align: center;
+           border-radius: 10px;
+        }
+        .product6{
+           padding-top: 10px;
+           grid-area: 3/3/3/3;
+           text-align: center;
+           border-radius: 10px;
+        }
+        .product6>img{
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+        }
+        .product6:hover{
+           background-color: whitesmoke;
+       }
+       .product7{
+           padding-top: 10px;
+           grid-area: 3/4/3/4;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .product7 > img{
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .product7:hover{
+           background-color: whitesmoke;
+       }
+       .product8{
+           padding-top: 10px;
+           grid-area: 3/5/3/5;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .product8 > img{
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .product8:hover{
+           background-color: whitesmoke;
+       }
+       .DRINKS{
+            margin-top: 25PX;
+            display: grid;
+            grid-template-columns:75px 250px 250px 250px 250px 75px;
+            grid-template-rows:75px 350px auto;
+            gap: 60px;  
+        }
+        .DRINKS >p{
+            grid-column:span 7;
+            text-align: center;
+            font-size: 40px;
+            background-color: aliceblue;
+            padding-top: 20px;
+        }
+        .bon > button{
+            color: black;
+            background-color:aliceblue;
+            border-radius: 5px; 
+            padding: 10px;
+            margin-top: 5px; 
+            font-weight: bolder;
+        }
+        .bon >button:hover{
+        background-color: #fc0373;
+        color: black;
+       }
+        .water > img{ 
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .water:hover{
+           background-color: whitesmoke;
+       }
+       .water{   
+           grid-area: 2/2/2/2;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .water1 > img{ 
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .water1:hover{
+           background-color: whitesmoke;
+       }
+       .water1{   
+           grid-area: 2/3/2/3;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .water2 > img{ 
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .water2:hover{
+           background-color: whitesmoke;
+       }
+       .water2{   
+           grid-area: 2/4/2/4;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .water3 > img{ 
+           height: 150px;
+           width: 200px;
+           border-radius: 10px;
+       }
+       .water3:hover{
+           background-color: whitesmoke;
+       }
+       .water3{   
+           grid-area: 2/5/2/5;
+           text-align: center;
+           border-radius: 10px;
+       }
+       .cafe{
+        display: grid;
+        grid-template-columns:600px 400px auto;
+        grid-template-rows: 100px 300px 310px;
+        gap: 10px;
+        background-color:aliceblue;
+        border-radius: 20px;   
+       }
+       .cafe >p{
+        grid-column: span 3;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bolder;
+        padding-top: 20px;
+        color:#3262a8;
+       }
+       .inside{
+        grid-area: 2/1/2/1;
+        grid-row: span 2;
+        margin-left: 20px;
+       }
+       .inside > img{
+        height: 600px;
+        width: 550px;
+        border-radius: 10px;
+        }
+        .pa > p >span{
+            font-size: 40px;
+            padding-bottom: 40px;
+        }
+        .pa{
+            font-size: 20px;
+            color: #3262a8;
+        }
+        .inside1 > img{
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .inside2{
+            grid-area: 3/2/3/3;
+        }
+        .inside2 > img{
+            height: 300px;
+            width: 700px;
+            border-radius: 10px;
+        }
+        
+    
+
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+       <div class="the">
+        <p>
+           <span>the <br>
+            MEENA's<br>
+            kitchen <br>
+            <br>
+        </span> 
+           Comfort food made with plant-based ingredients and lots of love
+        </p> 
+    </div>  
+
+        <div class="foot">
+            <ul>
+                <li> <a href="#MENU">MENU</a></li>
+                <br>
+                <li> <a href="#DD">DRINKS</a></li>
+                <br>
+                <li><a href="#c_afe">INSIDE THE CAFE</a></li>
+                <br>
+                <li>DELIVERY</li>
+                <br>
+                <li>ABOUT US</li>
+                <br>
+                <li>OUR ADVAOCASY</li>
+                
+                </ul>            
+        </div>
+    </div>
+
+<div class="products" id="MENU">
+    <p>  KITCHENS MENU</p>
+        <div class="product1">
+            <img src="pani.jpeg" alt="pani PURI">
+            <p>
+                <strong>PANI PURI <br>
+                    by menna,s kitchen</strong><br>
+                <br>
+                <strong>PRICE:100</strong> <br>
+                <br>
+                <strong>RATEINGS:4</strong>
+            </p>
+            <div class="buton">
+            <button>ADD TO CART</button>
+           <br>
+            <button > BUY NOW</button>
+          </div>
+
+        </div>
+        <div class="product2">
+            <img src="dosa.jpg" alt="pani PURI">
+            <p>
+                <strong>CRISPY DOSA <br>
+                    by menna,s kitchen</strong><br>
+                <br>
+                <strong>PRICE:150/piece</strong> <br>
+                <br>
+                <strong>RATEINGS:4.5</strong> 
+            </p>
+            <div class="buton">
+            <button >ADD TO CART</button>
+           <br>
+            <button> BUY NOW</button>
+          </div>
+
+        </div>
+        <div class="product3">
+            <img src="idly.jpg" alt="pani PURI">
+            <p>
+                <strong>SOFTY IDLYIS <br>
+                    by menna's kitchen</strong><br>
+                <br>
+                <strong>PRICE:50 /5 piece</strong> <br>
+                <br>
+                <strong>RATEINGS:4.6</strong> 
+            </p>
+        <div class="buton">
+            <button>ADD TO CART</button>
+           <br>
+            <button> BUY NOW</button>
+        </div>
+
+        </div>
+        <div class="product4">
+            <img src="poori.jpg" alt="pani PURI">
+            <p>
+                <strong>CRISPY POORI <br>
+                    by menna's kitchen</strong><br>
+                <br>
+                <strong>PRICE:50 /5 piece</strong> <br>
+                <br>
+                <strong>RATEINGS:4.7</strong> 
+            </p>
+        <div class="buton">
+            <button>ADD TO CART</button>
+           <br>
+            <button > BUY NOW</button>
+
+        </div>
+    </div>
+
+<div class="product5">
+        <img src="parotta-1.jpeg" alt="pani PURI">
+        <p>
+            <strong>FLAKKY POROTTA <br>
+                by menna's kitchen</strong><br>
+            <br>
+            <strong>PRICE:50 /5 piece</strong> <br>
+            <br>
+            <strong>RATEINGS:4.7</strong> 
+        </p>
+    <div class="buton">
+        <button>ADD TO CART</button>
+       <br>
+        <button > BUY NOW</button>
+    </div>
+</div> 
+
+<div class="product6">
+    <img src="kari.jpeg" alt="pani PURI">
+        <p>
+            <strong>MUTTON KARI dosa <br>
+                by menna's kitchen</strong><br>
+            <br>
+            <strong>PRICE:250/piece</strong> <br>
+            <br>
+            <strong>RATEINGS:4.7</strong> 
+        </p>
+    <div class="buton">
+        <button>ADD TO CART</button>
+        <br>
+        <button > BUY NOW</button>
+    </div>
+
+</div>
+<div class="product7">
+    <img src="mutton-biriyani-recipe.jpeg" alt="pani PURI">
+        <p>
+            <strong>MUTTON BIRIYANI <br>
+                by menna's kitchen</strong><br>
+            <br>
+            <strong>PRICE:250/piece</strong> <br>
+            <br>
+            <strong>RATEINGS:4.7</strong> 
+        </p>
+    <div class="buton">
+        <button>ADD TO CART</button>
+        <br>
+        <button > BUY NOW</button>
+    </div>
+
+</div>
+<div class="product8">
+    <img src="butter.jpg" alt="pani PURI">
+        <p>
+            <strong>BUTTER CHICKEN<br>
+                by menna's kitchen</strong><br>
+            <br>
+            <strong>PRICE:200/piece</strong> <br>
+            <br>
+            <strong>RATEINGS:4.2</strong> 
+        </p>
+    <div class="buton">
+        <button>ADD TO CART</button>
+        <br>
+        <button > BUY NOW</button>
+    </div>
+</div>
+</div>
+
+<div class="drinks" id="DD">
+    <p>drinks</p>
+    <div class="water">
+        <img src="WATER.jpg" alt="water MELON">
+          <p>
+            <strong>WATER MELON<br>
+                by menna's kitchen</strong><br>
+            <br>
+            <strong>PRICE:50/piece</strong> <br>
+            <br>
+            <strong>RATEINGS:4.2</strong> 
+         </p>
+    <div class="bon">
+        <button>ADD TO CART</button>
+        <br>
+        <button > BUY NOW</button>
+    </div>
+</div>
+<div class="water1">
+    <img src="lemon.avif" alt="lemon">
+      <p>
+        <strong>LEMON JUICE<br>
+            by menna's kitchen</strong><br>
+        <br>
+        <strong>PRICE:50/piece</strong> <br>
+        <br>
+        <strong>RATEINGS:4.2</strong> 
+     </p>
+<div class="bon">
+    <button>ADD TO CART</button>
+    <br>
+    <button > BUY NOW</button>
+</div>
+</div>
+
+<div class="water2">
+    <img src="rose.jpg" alt="rose milk">
+      <p>
+        <strong>ROSE milk<br>
+            by menna's kitchen</strong><br>
+        <br>
+        <strong>PRICE:50/piece</strong> <br>
+        <br>
+        <strong>RATEINGS:4.8</strong> 
+     </p>
+<div class="bon">
+    <button>ADD TO CART</button>
+    <br>
+    <button > BUY NOW</button>
+</div>
+</div>
+
+<div class="water3">
+    <img src="badam.jpg" alt="rose milk">
+      <p>
+        <strong>BADAM milk<br>
+            by menna's kitchen</strong><br>
+        <br>
+        <strong>PRICE:50/piece</strong> <br>
+        <br>
+        <strong>RATEINGS:4.8</strong> 
+     </p>
+<div class="bon">
+    <button>ADD TO CART</button>
+    <br>
+    <button > BUY NOW</button>
+</div>
+</div>
+</div>
+
+<div class="cafe" id="c_afe">
+    <p>WELCOME TO OUR CAFE</p>
+    <div class="INSIDE">
+        <img src="./inside.jpg" alt="cafe">
+    </div>
+    <div class="pa">
+        <p><span>INSIDE A cafe</span><br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam doloremque delectus officia quam consequuntur nemo qui hic quod! Asperiores assumenda tenetur magni sequi? Harum, id dolor officia aspernatur voluptatem iste.</p>
+
+    </div>
+    <div class="inside1">
+        <img src="./inside2.jpg" alt="cafe">
+
+    </div>
+    <div class="inside2">
+        <img src="./inside3.avif" alt="cafe">
+
+    </div>
+
+</div>
+
+   
+    
+
+    
+</body>
+</html>
